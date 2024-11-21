@@ -42,6 +42,8 @@ while game_finished == False:
             roll_3 = random.choice(dice_values)
             print(roll_3)
             rolls += 1
+            if rolls >= 6:
+                    game_finished = True
         elif reroll_3_Q == "no":
             game_finished = True
         else: 
@@ -52,6 +54,8 @@ while game_finished == False:
             roll_1 = random.choice(dice_values)
             print(roll_1)
             rolls += 1
+            if rolls >= 6:
+                game_finished = True
         elif reroll_1_Q == "no":
             game_finished = True
         else: 
@@ -62,6 +66,8 @@ while game_finished == False:
             roll_2 = random.choice(dice_values)
             print(roll_2)
             rolls += 1
+            if rolls >= 6:
+                game_finished = True
         elif reroll_2_Q == "no":
            game_finished = True
         else: 
@@ -70,25 +76,26 @@ while game_finished == False:
         player_1_score = 0
         game_finished = True
     else: 
-        reroll_all = input("Would you like to reroll your dice?")
+        reroll_all = input("Would you like to reroll your dice?\n")
         if reroll_all == "yes":
             roll_4 = random.choice(dice_values)
-            player_1_score += roll_1
+            player_1_score += roll_4
             rolls += 1
             print(f"Player 1 rolled a {roll_4}, for a total score of {player_1_score}.")
             roll_5 = random.choice(dice_values)
-            player_1_score += roll_1
+            player_1_score += roll_5
             rolls += 1
             print(f"Player 1 rolled a {roll_5}, for a total score of {player_1_score}.")
             roll_6 = random.choice(dice_values)
-            player_1_score += roll_1
+            player_1_score += roll_6
             rolls += 1
             print(f"Player 1 rolled a {roll_6}, for a total score of {player_1_score}.")
+            if rolls >= 6:
+                    game_finished = True
+        if reroll_all == "no":
+            game_finished = True
 
 
-
-if rolls >= 5:
-    game_finished == True
 
 Score = {"player_1_scores" : player_1_score}
                  
