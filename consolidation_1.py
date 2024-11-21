@@ -32,16 +32,21 @@ player_1_score += roll_3
 rolls += 1
 print(f"Player 1 rolled a {roll_3}, for a total score of {player_1_score}.")
 
-
+Score = {"roll_1" : roll_1,
+         "roll_2" : roll_2,
+         "roll_3" : roll_3}
 #create if statements to check if any of the roll values equal each other
 #if the values do equal each other, player should have the option to reroll
 while game_finished == False:
     if roll_1 == roll_2:
-        reroll_3_Q = input("Do you want to reroll your 3rd die? Type 'yes' or 'no'")
+        reroll_3_Q = input("Do you want to reroll your 3rd die? Type 'yes' or 'no'\n")
         if reroll_3_Q == "yes":
             roll_3 = random.choice(dice_values)
             print(roll_3)
             rolls += 1
+            Score['reroll_1'] = roll_4
+            Score['reroll_2'] = roll_5
+            Score['reroll_3'] = roll_6
             if rolls >= 6:
                     game_finished = True
         elif reroll_3_Q == "no":
@@ -54,6 +59,9 @@ while game_finished == False:
             roll_1 = random.choice(dice_values)
             print(roll_1)
             rolls += 1
+            Score['reroll_1'] = roll_4
+            Score['reroll_2'] = roll_5
+            Score['reroll_3'] = roll_6
             if rolls >= 6:
                 game_finished = True
         elif reroll_1_Q == "no":
@@ -61,17 +69,20 @@ while game_finished == False:
         else: 
             input("Do you want to reroll your 2nd die? Type 'yes' or 'no'")
     elif roll_1 == roll_3:
-        reroll_2_Q = input("Do you want to reroll your 2nd die? Type 'yes' or 'no'")
+        reroll_2_Q = input("Do you want to reroll your 2nd die? Type 'yes' or 'no'\n")
         if reroll_2_Q == "yes":
             roll_2 = random.choice(dice_values)
             print(roll_2)
             rolls += 1
+            Score['reroll_1'] = roll_4
+            Score['reroll_2'] = roll_5
+            Score['reroll_3'] = roll_6
             if rolls >= 6:
                 game_finished = True
         elif reroll_2_Q == "no":
            game_finished = True
         else: 
-            input("Do you want to reroll your 3rd die? Type 'yes' or 'no'")
+            input("Do you want to reroll your 3rd die? Type 'yes' or 'no'\n")
     elif roll_1 == roll_2 and roll_2 == roll_3 and roll_3 == roll_1:
         player_1_score = 0
         game_finished = True
@@ -81,23 +92,25 @@ while game_finished == False:
             roll_4 = random.choice(dice_values)
             player_1_score += roll_4
             rolls += 1
+            Score['roll_4'] = roll_4
             print(f"Player 1 rolled a {roll_4}, for a total score of {player_1_score}.")
             roll_5 = random.choice(dice_values)
             player_1_score += roll_5
             rolls += 1
+            Score['roll_5'] = roll_5
             print(f"Player 1 rolled a {roll_5}, for a total score of {player_1_score}.")
             roll_6 = random.choice(dice_values)
             player_1_score += roll_6
             rolls += 1
+            Score['roll_6'] = roll_6
             print(f"Player 1 rolled a {roll_6}, for a total score of {player_1_score}.")
+            if roll_1 == roll_2 and roll_2 == roll_3 and roll_3 == roll_1:
+                player_1_score = 0
+                game_finished = True
             if rolls >= 6:
                     game_finished = True
-        if reroll_all == "no":
+        elif reroll_all == "no":
             game_finished = True
 
-
-
-Score = {"player_1_scores" : player_1_score}
-                 
-for player_1_score in Score["score"]:
-    player_1_score.append(player_1_score)
+                
+print(Score)
