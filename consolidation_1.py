@@ -38,7 +38,10 @@ Score = {"roll_1" : roll_1,
 #create if statements to check if any of the roll values equal each other
 #if the values do equal each other, player should have the option to reroll
 while game_finished == False:
-    if roll_1 == roll_2:
+    if roll_1 == roll_2 and roll_2 == roll_3 and roll_3 == roll_1:
+        player_1_score = 0
+        game_finished = True
+    elif roll_1 == roll_2:
         reroll_3_Q = input("Do you want to reroll your 3rd die? Type 'yes' or 'no'\n")
         if reroll_3_Q == "yes":
             roll_3 = random.choice(dice_values)
@@ -83,9 +86,6 @@ while game_finished == False:
            game_finished = True
         else: 
             input("Do you want to reroll your 2nd die? Type 'yes' or 'no'\n")
-    elif roll_1 == roll_2 and roll_2 == roll_3 and roll_3 == roll_1:
-        player_1_score = 0
-        game_finished = True
     else: 
         reroll_all = input("Would you like to reroll your dice?\n")
         if reroll_all == "yes":
