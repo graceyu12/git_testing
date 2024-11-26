@@ -13,4 +13,5 @@ Step 4:
 Run through the while loop.
 If all of the values are equal, then the player's score will be 0. If 2 of them are equal, then the player will have the option to reroll the remaining dice. If a player chooses not to reroll their dice, or should their rolls exceed 6, then the while loop will break. If none of the values equal each other, then the player can reroll all of their dice.
 
+
 A player's final score will be printed out so that the player can try and exceed this score on their next playthrough. 
