@@ -49,21 +49,21 @@ while game_finished == False:
             print(roll_4)
             rolls += 1
             Score['reroll_1'] = roll_4
-            (f"Player 1 rolled a {roll_4}, for a total score of {player_1_score}.")
+            print(f"Player 1 rolled a {roll_4}, for a total score of {player_1_score}.")
             reroll_3_Q = input("Do you want to reroll your 3rd die? Type 'yes' or 'no'\n")
             if reroll_3_Q == "yes":
                 roll_5 = random.choice(dice_values)
                 print(roll_5)
                 rolls += 1
                 Score['reroll_2'] = roll_5
-                (f"Player 1 rolled a {roll_5}, for a total score of {player_1_score}.")
+                print(f"Player 1 rolled a {roll_5}, for a total score of {player_1_score}.")
                 reroll_3_Q = input("Do you want to reroll your 3rd die? Type 'yes' or 'no'\n")
                 if reroll_3_Q == "yes":
                     roll_6 = random.choice(dice_values)
                     print(roll_6)
                     rolls += 1
                     Score['reroll_3'] = roll_6
-                    (f"Player 1 rolled a {roll_6}, for a total score of {player_1_score}.")
+                    print(f"Player 1 rolled a {roll_6}, for a total score of {player_1_score}.")
             if rolls >= 6:
                     game_finished = True
         elif reroll_3_Q == "no":
@@ -73,12 +73,25 @@ while game_finished == False:
     elif roll_2 == roll_3:
         reroll_1_Q = input("Do you want to reroll your 1st die? Type 'yes' or 'no'\n")
         if reroll_1_Q == "yes":
-            roll_1 = random.choice(dice_values)
-            print(roll_1)
+            roll_4 = random.choice(dice_values)
+            print(roll_4)
             rolls += 1
-            Score['reroll_1'] = roll_1
-            Score['reroll_2'] = roll_1
-            Score['reroll_3'] = roll_1
+            Score['reroll_1'] = roll_4
+            print(f"Player 1 rolled a {roll_4}, for a total score of {player_1_score}.")
+            reroll_1_Q = input("Do you want to reroll your 3rd die? Type 'yes' or 'no'\n")
+            if reroll_1_Q == "yes":
+                roll_5 = random.choice(dice_values)
+                print(roll_5)
+                rolls += 1
+                Score['reroll_2'] = roll_5
+                print(f"Player 1 rolled a {roll_5}, for a total score of {player_1_score}.")
+                reroll_1_Q = input("Do you want to reroll your 3rd die? Type 'yes' or 'no'\n")
+                if reroll_1_Q == "yes":
+                    roll_6 = random.choice(dice_values)
+                    print(roll_6)
+                    rolls += 1
+                    Score['reroll_3'] = roll_6
+                    print(f"Player 1 rolled a {roll_6}, for a total score of {player_1_score}.")
             if rolls >= 6:
                 game_finished = True
         elif reroll_1_Q == "no":
@@ -88,12 +101,25 @@ while game_finished == False:
     elif roll_1 == roll_3:
         reroll_2_Q = input("Do you want to reroll your 2nd die? Type 'yes' or 'no'\n")
         if reroll_2_Q == "yes":
-            roll_2 = random.choice(dice_values)
-            print(roll_2)
+            roll_4 = random.choice(dice_values)
+            print(roll_4)
             rolls += 1
-            Score['reroll_1'] = roll_2
-            Score['reroll_2'] = roll_2
-            Score['reroll_3'] = roll_2
+            Score['reroll_1'] = roll_4
+            print(f"Player 1 rolled a {roll_4}, for a total score of {player_1_score}.")
+            reroll_2_Q = input("Do you want to reroll your 3rd die? Type 'yes' or 'no'\n")
+            if reroll_2_Q == "yes":
+                roll_5 = random.choice(dice_values)
+                print(roll_5)
+                rolls += 1
+                Score['reroll_2'] = roll_5
+                print(f"Player 1 rolled a {roll_5}, for a total score of {player_1_score}.")
+                reroll_2_Q = input("Do you want to reroll your 3rd die? Type 'yes' or 'no'\n")
+                if reroll_2_Q == "yes":
+                    roll_6 = random.choice(dice_values)
+                    print(roll_6)
+                    rolls += 1
+                    Score['reroll_3'] = roll_6
+                    print(f"Player 1 rolled a {roll_6}, for a total score of {player_1_score}.")
             if rolls >= 6:
                 game_finished = True
         elif reroll_2_Q == "no":
