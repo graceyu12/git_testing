@@ -40,6 +40,7 @@ Score = {"roll_1" : roll_1,
 while game_finished == False:
     if roll_1 == roll_2 and roll_2 == roll_3 and roll_3 == roll_1:
         player_1_score = 0
+        print(f"Player 1 tupled-out and has {player_1_score} points.")
         game_finished = True
     elif roll_1 == roll_2:
         reroll_3_Q = input("Do you want to reroll your 3rd die? Type 'yes' or 'no'\n")
