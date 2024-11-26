@@ -44,10 +44,10 @@ while game_finished == False:
     elif roll_1 == roll_2:
         reroll_3_Q = input("Do you want to reroll your 3rd die? Type 'yes' or 'no'\n")
         if reroll_3_Q == "yes":
-            roll_3 = random.choice(dice_values)
-            print(roll_3)
+            roll_4 = random.choice(dice_values)
+            print(roll_4)
             rolls += 1
-            Score['reroll_1'] = roll_3
+            Score['reroll_1'] = roll_4
             Score['reroll_2'] = roll_3
             Score['reroll_3'] = roll_3
             if rolls >= 6:
