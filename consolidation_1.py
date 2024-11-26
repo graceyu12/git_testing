@@ -59,7 +59,7 @@ while game_finished == False:
                     roll_6 = random.choice(dice_values)
                     print(roll_6)
                     rolls += 1
-                    Score['reroll_2'] = roll_6
+                    Score['reroll_3'] = roll_6
             if rolls >= 6:
                     game_finished = True
         elif reroll_3_Q == "no":
